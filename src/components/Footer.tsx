@@ -15,8 +15,8 @@ export default function Footer() {
   });
 
   useEffect(() => {
-    const handleKeyDown = (e?: KeyboardEvent | Event | any) => {
-      if (e && e.key && typeof e.key === 'string' && e.key.length === 1) {
+    const handleKeyDown = (e?: KeyboardEvent | Event) => {
+      if (e && 'key' in e && typeof e.key === 'string' && e.key.length === 1) {
         wordRef.current = (wordRef.current + e.key).slice(-11);
         if (wordRef.current.toLowerCase() === 'antigravity') {
           activateAntigravity();

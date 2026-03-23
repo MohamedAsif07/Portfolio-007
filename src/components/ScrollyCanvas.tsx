@@ -16,6 +16,7 @@ export default function ScrollyCanvas() {
     offset: ['start start', 'end end'],
   });
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const loadedImages: HTMLImageElement[] = [];
     let loadedCount = 0;
@@ -66,6 +67,7 @@ export default function ScrollyCanvas() {
     );
   };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useMotionValueEvent(scrollYProgress, 'change', (latest) => {
     if (images.length === FRAME_COUNT) {
       const frameIndex = Math.min(FRAME_COUNT - 1, Math.floor(latest * FRAME_COUNT));
@@ -73,6 +75,7 @@ export default function ScrollyCanvas() {
     }
   });
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const handleResize = () => {
       if (images.length === FRAME_COUNT) {
@@ -81,7 +84,7 @@ export default function ScrollyCanvas() {
     };
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, [images, scrollYProgress]);
+  }, [images, drawFrame]);
 
   return (
     <div ref={containerRef} className="h-[500vh] w-full relative bg-[#121212]">

@@ -22,7 +22,7 @@ export default function HackerGame() {
     if (!ctx) return;
 
     let animationFrameId: number;
-    let player = { x: 50, y: 150, width: 12, height: 12, velocityY: 0, gravity: 0.5, jump: -8 };
+    const player = { x: 50, y: 150, width: 12, height: 12, velocityY: 0, gravity: 0.5, jump: -8 };
     let obstacles: { x: number, width: number, topHeight: number, gap: number }[] = [];
     let collectibles: { x: number, y: number, radius: number, collected: boolean }[] = [];
     let speed = 4;
