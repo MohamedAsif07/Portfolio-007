@@ -145,7 +145,6 @@ export default function TerminalChat() {
               value={input}
               onChange={e => setInput(e.target.value)}
               className="w-full bg-transparent outline-none text-white font-mono text-sm caret-[#00FF94]"
-              autoFocus
             />
           </form>
         </div>
