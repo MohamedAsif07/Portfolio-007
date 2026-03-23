@@ -3,21 +3,57 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #121212;
+  --foreground: #ffffff;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #0a0a0a; }
+::-webkit-scrollbar-thumb { background: #00FF94; border-radius: 2px; }
+
+/* Text selection */
+::selection { background: #00FF94; color: #000; }
+
+/* Smooth scroll & Antigravity mode support */
+html { scroll-behavior: smooth; }
+
+.floating * {
+  animation: float-away 3s ease-in forwards;
+}
+@keyframes float-away {
+  to { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
+}
+
+/* CRT scanline effect */
+.scanlines::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(
+    0deg, transparent, transparent 2px,
+    rgba(0,255,148,0.03) 2px, rgba(0,255,148,0.03) 4px
+  );
+  pointer-events: none; z-index: 10;
+}
+
+/* Blinking cursor */
+.cursor::after {
+  content: '█'; color: #00FF94;
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink { 50% { opacity: 0; } }
+
+/* Marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 @layer utilities {
