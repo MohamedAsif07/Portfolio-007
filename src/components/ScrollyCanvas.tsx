@@ -21,7 +21,7 @@ export default function ScrollyCanvas() {
     const loadedImages: HTMLImageElement[] = [];
     let loadedCount = 0;
 
-    for (let i = 0; i < FRAME_COUNT; i++) {
+    const loadFrame = (i: number) => {
       const img = new Image();
       const frameNumber = i.toString().padStart(2, '0');
       img.src = `/sequence/frame_${frameNumber}_delay-0.066s.webp`;
@@ -32,8 +32,34 @@ export default function ScrollyCanvas() {
           drawFrame(0, loadedImages);
         }
       };
-      loadedImages.push(img);
-    }
+      img.onerror = () => {
+        console.error(`Failed to load frame ${frameNumber}`);
+        loadedCount++;
+        if (loadedCount === FRAME_COUNT) {
+          setImages(loadedImages);
+          drawFrame(0, loadedImages);
+        }
+      };
+      loadedImages[i] = img;
+    };
+
+    // Load frames with idle callback for better performance
+    let frameIndex = 0;
+    const loadNextBatch = () => {
+      const batchSize = 5; // Load 5 frames at a time
+      for (let j = 0; j < batchSize && frameIndex < FRAME_COUNT; j++) {
+        loadFrame(frameIndex);
+        frameIndex++;
+      }
+      if (frameIndex < FRAME_COUNT) {
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(loadNextBatch, { timeout: 1000 });
+        } else {
+          setTimeout(loadNextBatch, 16); // Fallback to ~60fps
+        }
+      }
+    };
+    loadNextBatch();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

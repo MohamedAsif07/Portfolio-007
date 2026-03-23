@@ -15,7 +15,7 @@ export default function Overlay({ progress }: { progress: MotionValue<number> })
   return (
     <div className="w-full h-full relative pointer-events-none z-10 text-white">
       <motion.div style={{ opacity: opacity1, y: y1 }} className="absolute inset-0 flex flex-col items-center justify-center text-center p-8">
-        <h1 className="text-5xl md:text-8xl font-bold mb-4 drop-shadow-lg" style={{ fontFamily: 'Clash Display, sans-serif' }}>Mohammed Asif.</h1>
+        <h1 className="text-5xl md:text-8xl font-bold mb-4 drop-shadow-lg" style={{ fontFamily: 'Clash Display, sans-serif' }}>Mohamed Asif.</h1>
         <p className="text-xl md:text-3xl font-light text-[#00FF94] tracking-wide">Android Dev & Cyber Enthusiast.</p>
       </motion.div>
       <motion.div style={{ opacity: opacity2, y: y2 }} className="absolute inset-0 flex flex-col items-start justify-center p-8 md:p-24">

@@ -63,6 +63,9 @@ export default function Projects() {
                 src={project.image}
                 alt={project.title}
                 fill
+                priority={idx < 2}
+                quality={75}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-110 opacity-60 group-hover:opacity-100"
               />
               {/* Gradient Overlay for text readability */}

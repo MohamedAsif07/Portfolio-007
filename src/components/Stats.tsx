@@ -61,7 +61,7 @@ export default function Stats() {
     { icon: '👨‍💻', count: 20, suffix: '+', label: 'Open Source Projects' },
     { icon: '🎓', count: 150, suffix: '+', label: 'Students Helped' },
     { icon: '⚡', count: 50, suffix: '+', label: 'Daily Courses' },
-    { icon: '🔐', count: 10, suffix: '+', label: 'Tech Events' },
+    { icon: '🔐', count: 3, suffix: '+', label: 'Tech Events' },
   ];
 
   const certs = [

@@ -63,7 +63,7 @@ export default function Footer() {
 
         <div className="flex flex-col md:flex-row items-center justify-between border-t border-white/10 pt-8 gap-8">
           <div className="text-zinc-500 font-mono text-sm flex flex-col gap-2 text-center md:text-left">
-            <span>Mohammed Asif © 2026</span>
+            <span>Mohamed Asif © 2026</span>
             <span>Built with Next.js & ☕</span>
           </div>
 
