@@ -34,6 +34,7 @@ export default function ScrollyCanvas() {
       };
       loadedImages.push(img);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const drawFrame = (frameIndex: number, loadedImages = images) => {
@@ -84,6 +85,7 @@ export default function ScrollyCanvas() {
     };
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [images, drawFrame]);
 
   return (

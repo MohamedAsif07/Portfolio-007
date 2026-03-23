@@ -53,7 +53,7 @@ export default function Footer() {
                 onClick={(e) => {
                   if (e.detail === 3) activateAntigravity();
                 }}>
-              LET'S BUILD SOMETHING
+              LET&apos;S BUILD SOMETHING
             </h2>
             <h2 className="text-4xl md:text-7xl font-black text-[#00FF94]" style={{ fontFamily: 'Clash Display, sans-serif' }}>
               TOGETHER.
