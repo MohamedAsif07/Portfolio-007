@@ -5,30 +5,30 @@ import { useState } from 'react';
 
 const categories = ['All', 'Mobile', 'Security', 'Automation', 'Design', 'DevOps'];
 const skills = [
-  { name: 'Android', value: 95, category: 'Mobile', color: '#00FF94' },
-  { name: 'Kotlin', value: 90, category: 'Mobile', color: '#00FF94' },
-  { name: 'Java', value: 88, category: 'Mobile', color: '#00FF94' },
-  { name: 'Firebase', value: 85, category: 'Mobile', color: '#00FF94' },
-  { name: 'Google Maps API', value: 80, category: 'Mobile', color: '#00FF94' },
+  { name: 'Android', value: 56, category: 'Mobile', color: '#00FF94' },
+  { name: 'Kotlin', value: 70, category: 'Mobile', color: '#00FF94' },
+  { name: 'Java', value: 77, category: 'Mobile', color: '#00FF94' },
+  { name: 'Firebase', value: 83, category: 'Mobile', color: '#00FF94' },
+  { name: 'Google Maps API', value: 30, category: 'Mobile', color: '#00FF94' },
   
-  { name: 'Python', value: 92, category: 'Automation', color: '#00FF94' },
-  { name: 'Scrapy', value: 88, category: 'Automation', color: '#00FF94' },
-  { name: 'Selenium', value: 85, category: 'Automation', color: '#00FF94' },
-  { name: 'Tor/SOCKS5', value: 75, category: 'Automation', color: '#00FF94' },
+  { name: 'Python', value: 40, category: 'Automation', color: '#00FF94' },
+  { name: 'Scrapy', value: 58, category: 'Automation', color: '#00FF94' },
+  { name: 'Selenium', value: 45, category: 'Automation', color: '#00FF94' },
+  { name: 'Tor/SOCKS5', value: 25, category: 'Automation', color: '#00FF94' },
   
   { name: 'Wireshark', value: 70, category: 'Security', color: '#FF6B35' },
   { name: 'Kali Linux', value: 80, category: 'Security', color: '#FF6B35' },
-  { name: 'OSINT', value: 75, category: 'Security', color: '#FF6B35' },
-  { name: 'Dark Web Analysis', value: 65, category: 'Security', color: '#FF6B35' },
+  { name: 'OSINT', value: 38, category: 'Security', color: '#FF6B35' },
+  { name: 'Dark Web Analysis', value: 70, category: 'Security', color: '#FF6B35' },
   
   { name: 'GitHub Actions', value: 85, category: 'DevOps', color: '#00FF94' },
   { name: 'CI/CD', value: 80, category: 'DevOps', color: '#00FF94' },
   { name: 'Linux CLI', value: 88, category: 'DevOps', color: '#00FF94' },
   { name: 'Git', value: 92, category: 'DevOps', color: '#00FF94' },
   
-  { name: 'Figma', value: 75, category: 'Design', color: '#00FF94' },
-  { name: 'Material Design', value: 82, category: 'Design', color: '#00FF94' },
-  { name: 'UI/UX', value: 78, category: 'Design', color: '#00FF94' }
+  { name: 'Figma', value: 30, category: 'Design', color: '#00FF94' },
+  { name: 'Material Design', value: 20, category: 'Design', color: '#00FF94' },
+  { name: 'UI/UX', value: 50, category: 'Design', color: '#00FF94' }
 ];
 
 export default function SkillsMatrix() {
