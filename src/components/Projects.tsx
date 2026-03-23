@@ -21,7 +21,7 @@ export default function Projects() {
       description: 'Python Scrapy bot with GitHub actions extracting free courses daily and distributing via Telegram.',
       color: 'bg-[#00FF94]/10',
       image: '/images/udemy.png',
-      link: '#'
+      link: 'https://t.me/Free_udemy_cource_1'
     },
     {
       title: 'Dark Web Crawler',
@@ -29,7 +29,7 @@ export default function Projects() {
       description: 'Selenium-based crawler extracting and analyzing active Onion links using the Tor Network (SOCKS5).',
       color: 'bg-emerald-500/10',
       image: '/images/darkweb.png',
-      link: '#'
+      link: 'https://github.com/MohamedAsif07/web-scraping-in-tor-'
     },
     {
       title: 'Near Work App',
@@ -37,7 +37,7 @@ export default function Projects() {
       description: 'Localized job matching platform connecting seekers with immediate opportunities using precise geo-location and skill-matching algorithms.',
       color: 'bg-cyan-500/10',
       image: '/images/nearwork.png',
-      link: '#'
+      link: 'https://github.com/MohamedAsif07/Nearwork'
     }
   ];
 

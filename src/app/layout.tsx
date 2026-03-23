@@ -10,8 +10,8 @@ const syneMono = Syne_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mohammed Asif | Android Dev & Cybersecurity",
-  description: "Portfolio of Mohammed Asif — Android developer, cybersecurity enthusiast, and automation engineer from Chennai.",
+  title: "Mohamed Asif | Android Dev & Cybersecurity",
+  description: "Portfolio of Mohamed Asif — Android developer, cybersecurity enthusiast, and automation engineer from Chennai.",
   openGraph: {
     images: ['/og-image.png']
   },
